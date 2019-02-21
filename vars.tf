@@ -13,7 +13,6 @@ variable "plan" {
 }
 
 variable "count" {
-  default     = "1"
   description = "Number of nodes of type var.plan."
 }
 
