@@ -1,9 +1,22 @@
 Flatcar Linux on Packet
 ===
 
+[![Build Status](https://cloud.drone.io/api/badges/jmarhee/packet-flatcar-linux-upgrade/status.svg)](https://cloud.drone.io/jmarhee/packet-flatcar-linux-upgrade)
+
 To run Flatcar Linux on <a href="https://packet.com">Packet</a>, there are two methods; <a href="https://docs.flatcar-linux.org/os/booting-with-ipxe/">iPXE booting Flatcar Linux</a> using <a href="https://support.packet.com/kb/articles/custom-ipxe">Packet's custom iPXE boot option</a> for a new installation, or <a href="https://docs.flatcar-linux.org/os/update-from-container-linux/">upgrading from Container Linux (formerly CoreOS)</a>, which is the method used here.
 
 This project provisions Packet devices, and performs an in-place upgrade from Container Linux to Flatcar Linux. 
+
+Setup
+--
+
+The only required variable is `auth_token`, your <a href="https://www.packet.com/developers/api/">API token for Packet.com</a>, and `count` (the number of servers to provision and configure). Once provided, you can plan and apply this deployment:
+
+```
+terraform init 
+terraform plan
+terraform apply
+```
 
 Kubernetes Preconfiguration
 --
