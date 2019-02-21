@@ -23,7 +23,7 @@ variable "flatcar_update_url" {
 }
 
 variable "coreos_release_channel" {
-  description = "CoreOS Release Channle (stable, alpha, beta)"
+  description = "CoreOS Release Channel (stable, alpha, beta)"
   default     = "alpha"
 }
 
